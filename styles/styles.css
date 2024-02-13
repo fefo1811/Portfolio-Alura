@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat:ital@0;1&family=Poppins&family=Roboto&display=swap');
+
+:root {
+  /* Pseudo-classe que servirá para declarar variáveis CSS */
+  --cor-primaria: #2c3639;
+  --cor-secundaria: #dcd7c9;
+  --cor-terciaria: #a27b5c;
+  --cor-hover: #3f4e4f;
+
+  --font-primaria: "Montserrat", sans-serif;
+  --font-secundaria: "Krona One", sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.titulo-destaque {
+  color: var(--cor-terciaria); /* Utilizando var() para a variável ser utilizada */
+}
+
+body {
+  box-sizing: border-box;
+  background-color: var(--cor-primaria);
+  color: var(--cor-secundaria); 
+}
+
+.container-apresentacao {
+  padding: 5.7% 15%;
+  display: flex;
+  align-items: center; /* Alinha ao centro do elemento maior */
+  justify-content: space-between;
+  gap: 82px;
+}
+
+.container-conteudo {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.conteudo-titulo {
+  font-size: 2.25rem;
+  font-family: var(--font-secundaria);
+}
+
+.conteudo-texto {
+  font-size: 1.25rem;
+  font-family: var(--font-primaria);
+}
+
+.container-botao {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  justify-content: space-between;
+  margin: 5% 10% 0 10%;
+}
+
+.botao-subtitulo {
+  font-family: var(--font-secundaria);
+  font-size: 1.25rem;
+  font-weight: 400;
+}
+
+.botao {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  text-decoration: none;
+  width: 70%;
+  text-align: center;
+  border: 2px solid var(--cor-terciaria);
+  border-radius: 8px;
+  font-size: 1.25rem;
+  padding: 14.5px 0;
+  color: var(--cor-secundaria);
+  font-family: var(--font-primaria);
+  font-weight: 600;
+}
+
+.botao:hover {
+  background-color: var(--cor-hover);
+}
+
+.foto-perfil {
+    width: 30%;
+    border: var(--cor-secundaria) 3px solid;
+    border-radius: 40px;
+}
+
+.rodape {
+  color: var(--cor-primaria);
+  background-color: var(--cor-terciaria);
+  padding: 1%;
+  font-family: var(--font-primaria);
+  font-size: 1.25rem;
+  font-weight: 400;
+  text-align: center;
+}
+
+
+.cabecalho {
+  padding: 2% 0% 0% 15%;  
+}
+
+.cabecalho-nav {
+  display: flex;
+  gap: 80px;
+}
+
+.cabecalho-links {
+  font-family: var(--font-primaria);
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--cor-terciaria);
+  text-decoration: none;
+}
+
+@media (max-width: 1200px) {
+  .container-apresentacao {
+    flex-direction: column-reverse;
+    padding: 5%;
+  }
+
+  .container-conteudo {
+    gap: 40px;
+    width: auto;
+  }
+
+  .cabecalho {
+    padding: 10%;
+  }
+
+  .cabecalho-nav {
+    justify-content: center;
+  }
+
+
+}
+
+
+/* Anotações */
+
+/* 
+
+Box-sizing: É um parâmetro que organiza o componente-filho dentro do componente-pai. É um parâmetro adicionado dentro de um componente-pai;
+ {
+  Border-box: É um valor de box-sizing onde o componente-filho vai se adaptar dentro do componente-pai caso possuam padding e/ou borda;
+ }
+
+
+*/
